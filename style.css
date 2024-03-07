@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Montserrat';
+    font-family: 'Fraunces';
+    display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
+   background-color: hsl(30, 38%, 92%);
+   font-size: 14px;
+}
+
+.main-component {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    width: 500px;
+    height: auto;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+
+.left-section img {
+    min-height: 100%;
+    max-width: 100%;
+}
+
+.right-section {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+#product {
+    font-family: 'Montserrat';
+    opacity: 0.6;
+    font-size: 0.8rem;
+    margin-bottom: 5%;
+    letter-spacing: .2rem;
+}
+
+.right-section h2 {
+    margin-bottom: 10px;;
+}
+
+#text {
+    font-family: 'Montserrat';
+    opacity: 0.7;
+}
+
+.price {
+   display: flex;
+   align-items: center;
+}
+
+.price #current {
+    font-weight: 700;
+    color: hsl(158, 36%, 37%);
+}
+
+.price #original {
+    font-size: 0.7rem;
+    text-decoration: line-through;
+    margin-left: 5%;
+    position: relative;
+    bottom: 5px;
+}
+
+.cart img {
+   margin-right: 6px;
+   font-size: 0.8rem;
+}
+
+button {
+    display: flex;
+    background-color: hsl(158, 36%, 37%);
+    border: none;
+    padding: 7% 29%;
+    border-radius: 10px;
+    color: hsl(0, 0%, 100%); 
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: hsl(212, 21%, 14%);
+}
+
+@media (max-width: 500px) {
+    .main-component {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        height: auto;
+    }
+.left-section img {
+    height: 250px;
+    min-width: 100%;
+} 
+
+}
